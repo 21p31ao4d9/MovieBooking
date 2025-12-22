@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <!-- Always show Home and Movies -->
+  <a routerLink="/home">🏠 Home</a>
+  <a routerLink="/movies">🎬 Movies</a>
+
+  <!-- Before login -->
+  <ng-container *ngIf="!isLoggedIn">
+    <a routerLink="/login">🔑 Login</a>
+    <a routerLink="/register">📝 Register</a>
+  </ng-container>
+
+  <!-- After user login -->
+  <ng-container *ngIf="isLoggedIn && role === 'User'">
+    <a routerLink="/mytickets">🎟️ My Tickets</a>
+    <a routerLink="/change-password">🔒 Change Password</a>
+    <span class="username">👤 {{ username }}</span>
+    <button (click)="logout()">🚪 Logout</button>
+  </ng-container>
+
+  <!-- After admin login -->
+  <ng-container *ngIf="isLoggedIn && role === 'Admin'">
+    <a routerLink="/admin/dashboard">📊 Admin Dashboard</a>
+    <a routerLink="/admin/add-movie">➕ Add Movie</a>
+    <a routerLink="/admin/delete-movie">❌ Delete Movie</a>
+    <a routerLink="/change-password">🔒 Change Password</a>
+    <span class="username">👑 {{ username }}</span>
+    <button (click)="logout()">🚪 Logout</button>
+  </ng-container>
+</nav>

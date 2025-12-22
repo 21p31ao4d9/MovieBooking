@@ -1,0 +1,14 @@
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\obj\Debug\net8.0\MovieBookingApp.Models.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\obj\Debug\net8.0\MovieBookingApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\obj\Debug\net8.0\MovieBookingApp.Models.AssemblyInfoInputs.cache
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\obj\Debug\net8.0\MovieBookingApp.Models.AssemblyInfo.cs
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\obj\Debug\net8.0\MovieBookingApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\bin\Debug\net8.0\MovieBookingApp.Models.deps.json
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\bin\Debug\net8.0\MovieBookingApp.Models.runtimeconfig.json
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\bin\Debug\net8.0\MovieBookingApp.Models.dll
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\bin\Debug\net8.0\MovieBookingApp.Models.pdb
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\obj\Debug\net8.0\MovieBookingApp.Models.dll
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\obj\Debug\net8.0\refint\MovieBookingApp.Models.dll
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\obj\Debug\net8.0\MovieBookingApp.Models.pdb
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\obj\Debug\net8.0\MovieBookingApp.Models.genruntimeconfig.cache
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Models\obj\Debug\net8.0\ref\MovieBookingApp.Models.dll

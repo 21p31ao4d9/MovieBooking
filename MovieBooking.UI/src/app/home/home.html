@@ -1,0 +1,17 @@
+<div class="home-container">
+  <h1>Welcome to Movie Booking App 🎬</h1>
+
+  <div *ngIf="!isLoggedIn">
+    <p>Please <a routerLink="/login">Login</a> or <a routerLink="/register">Register</a> to continue.</p>
+  </div>
+
+  <div *ngIf="isLoggedIn && role === 1">
+    <p>Hello User! You can browse movies and book tickets.</p>
+    <a routerLink="/movies">Go to Movies</a>
+  </div>
+
+  <div *ngIf="isLoggedIn && role === 2">
+    <p>Hello Admin! You can manage movies and bookings.</p>
+    <a routerLink="/admin/movies">Manage Movies</a>
+  </div>
+</div>

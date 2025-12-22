@@ -1,0 +1,11 @@
+.legend { display: flex; gap: 8px; margin-bottom: 8px; }
+.lg { padding: 4px 8px; border-radius: 4px; color: #fff; font-size: 12px; }
+.available { background: #2ecc71; }
+.selected { background: #3498db; }
+.booked { background: #e74c3c; }
+
+.seat-grid { display: flex; flex-direction: column; gap: 10px; margin: 12px 0; }
+.row { display: grid; grid-template-columns: repeat(10, 48px); gap: 8px; justify-content: center; }
+.seat { min-width: 48px; height: 40px; }
+.seat.booked { background: #e74c3c; color: #fff; border-color: #c0392b; cursor: not-allowed; }
+.seat.selected { background: #3498db; color: #fff; border-color: #2c6fb3; }

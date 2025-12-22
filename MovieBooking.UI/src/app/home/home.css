@@ -1,0 +1,22 @@
+.home-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.home-container h1 {
+  color: #0078d7;
+}
+
+.home-container a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #0078d7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.home-container a:hover {
+  background: #005fa3;
+}

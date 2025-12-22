@@ -1,0 +1,29 @@
+<h2>Seating plan — {{ data.movie.movieName }}</h2>
+
+<div class="legend">
+  <span class="available">Available</span>
+  <span class="selected">Selected</span>
+  <span class="booked">Booked</span>
+</div>
+
+<div class="seat-grid">
+  <div *ngFor="let row of seatRows" class="row">
+    <button
+      *ngFor="let seat of row"
+      class="seat"
+      [ngClass]="{
+        'booked': bookedSeats.has(seat),
+        'selected': selectedSeats.includes(seat)
+      }"
+      [disabled]="bookedSeats.has(seat)"
+      (click)="onSeatClick(seat)"
+    >
+      {{ seat }}
+    </button>
+  </div>
+</div>
+
+<div class="actions">
+  <button (click)="confirmBooking()">Confirm booking</button>
+  <button (click)="dialogRef.close()">Cancel</button>
+</div>

@@ -1,0 +1,25 @@
+<h2 class="page-title">📊 Admin Dashboard</h2>
+
+<div *ngIf="stats && movies.length > 0; else loading">
+  <div class="stats-grid">
+    <div class="stat-card users">👥 <h3>{{ stats.totalUsers }}</h3><p>Total Users</p></div>
+    <div class="stat-card movies">🎬 <h3>{{ stats.totalMovies }}</h3><p>Total Movies</p></div>
+    <div class="stat-card bookings">🎟️ <h3>{{ stats.totalBookings }}</h3><p>Total Bookings</p></div>
+    <div class="stat-card available">✅ <h3>{{ stats.availableTickets }}</h3><p>Available Tickets</p></div>
+    <div class="stat-card sold">❌ <h3>{{ stats.soldTickets }}</h3><p>Sold Tickets</p></div>
+  </div>
+
+  <div class="chart-container">
+    <h3>Tickets Overview</h3>
+    <canvas #ticketsChart></canvas>
+  </div>
+
+  <div class="chart-container">
+    <h3>Bookings per Movie</h3>
+    <canvas #bookingsChart></canvas>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p class="loading">Loading dashboard stats...</p>
+</ng-template>

@@ -1,17 +1,29 @@
 <div class="home-container">
-  <h1>Welcome to Movie Booking App 🎬</h1>
-
-  <div *ngIf="!isLoggedIn">
-    <p>Please <a routerLink="/login">Login</a> or <a routerLink="/register">Register</a> to continue.</p>
+  <!-- Hero section -->
+  <div class="hero">
+    <h1>🎬 Movie Booking App</h1>
+    <p class="tagline">Your gateway to the latest blockbusters and timeless classics</p>
   </div>
 
-  <div *ngIf="isLoggedIn && role === 1">
-    <p>Hello User! You can browse movies and book tickets.</p>
-    <a routerLink="/movies">Go to Movies</a>
+  <!-- Highlights section -->
+  <div class="highlights">
+    <div class="highlight-card">
+      <h2>🔥 Trending Now</h2>
+      <p>Catch the most popular movies everyone’s talking about.</p>
+    </div>
+    <div class="highlight-card">
+      <h2>🎟️ Easy Booking</h2>
+      <p>Reserve your seats in just a few clicks.</p>
+    </div>
+    <div class="highlight-card">
+      <h2>⭐ Personalized Experience</h2>
+      <p>Track your tickets and favorite movies seamlessly.</p>
+    </div>
   </div>
 
-  <div *ngIf="isLoggedIn && role === 2">
-    <p>Hello Admin! You can manage movies and bookings.</p>
-    <a routerLink="/admin/movies">Manage Movies</a>
+  <!-- Promo banner -->
+  <div class="promo-banner">
+    <h2>🍿 Ready for your next show?</h2>
+    <p>Browse movies and book tickets directly from the navigation bar above.</p>
   </div>
 </div>

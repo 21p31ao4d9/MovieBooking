@@ -78,6 +78,27 @@ namespace MovieBookingApp.Models.Migrations
                         });
                 });
 
+            modelBuilder.Entity("MovieBookingApp.Models.Seat", b =>
+                {
+                    b.Property<int>("SeatID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SeatID"), 1L, 1);
+
+                    b.Property<int>("MovieID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SeatNumber")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("SeatID");
+
+                    b.ToTable("Seats");
+                });
+
             modelBuilder.Entity("MovieBookingApp.Models.Ticket", b =>
                 {
                     b.Property<int>("TicketID")

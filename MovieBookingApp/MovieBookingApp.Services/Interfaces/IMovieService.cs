@@ -12,7 +12,14 @@ namespace MovieBookingApp.Services.Interfaces
         void UpdateMovieStatus(int movieId, string status);
         void DeleteMovie(int movieId);
 
+        List<string> GetAvailableSeatsForMovie(int movieId);
+
         IEnumerable<TicketDto> GetBookingsByMovie(string movieName);
         IEnumerable<TicketDto> GetBookingsByUser(string username);
+
+        int GetTotalMovies();
+        int GetAvailableTickets();
+        int GetSoldTickets();
+
     }
 }

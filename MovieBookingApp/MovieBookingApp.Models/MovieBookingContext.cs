@@ -9,6 +9,8 @@ namespace MovieBookingApp.Models
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
 
+        public DbSet<Seat> Seats { get; set; }
+
         // Constructor for DI (connection string comes from API layer)
         public MovieBookingContext(DbContextOptions<MovieBookingContext> options) : base(options) { }
 

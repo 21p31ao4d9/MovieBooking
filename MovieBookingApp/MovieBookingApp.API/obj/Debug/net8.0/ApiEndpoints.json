@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "MovieBookingApp.API.Controllers.MoviesController",
+    "Method": "GetSeats",
+    "RelativePath": "api/v1.0/moviebooking/{movieId}/seats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MovieBookingApp.API.Controllers.TicketsController",
     "Method": "BookTicket",
     "RelativePath": "api/v1.0/moviebooking/{moviename}/add",
@@ -73,22 +89,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MovieBookingApp.API.Controllers.UsersController",
-    "Method": "ForgotPassword",
-    "RelativePath": "api/v1.0/moviebooking/{username}/forgot",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "username",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "MovieBookingApp.API.Controllers.MoviesController",
     "Method": "AddMovie",
     "RelativePath": "api/v1.0/moviebooking/add",
@@ -112,6 +112,48 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieBookingApp.API.Controllers.UsersController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/v1.0/moviebooking/change-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MovieBookingApp.Services.DTOs.Users.ChangePasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieBookingApp.API.Controllers.UsersController",
+    "Method": "GetDashboardStats",
+    "RelativePath": "api/v1.0/moviebooking/dashboard/stats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieBookingApp.API.Controllers.UsersController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/v1.0/moviebooking/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MovieBookingApp.Dtos.Users.ForgotPasswordRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

@@ -1,7 +1,10 @@
-﻿using MovieBookingApp.Models;
+﻿using MovieBookingApp.Dtos.Users;
+using MovieBookingApp.Models;
 using MovieBookingApp.Services.DTOs.Users;
 using MovieBookingApp.Services.Interfaces;
 using System.Linq;
+using BCrypt.Net;
+
 
 namespace MovieBookingApp.Services.Implementations
 {
@@ -12,6 +15,10 @@ namespace MovieBookingApp.Services.Implementations
         public UserService(MovieBookingContext context)
         {
             _context = context;
+        }
+        public IEnumerable<User> GetAllUsers()
+        {
+            return _context.Users.ToList();
         }
 
         public UserResponseDto Register(UserRegisterDto dto)
@@ -55,5 +62,31 @@ namespace MovieBookingApp.Services.Implementations
                 Role = user.Role
             };
         }
+
+        public bool ChangePassword(ChangePasswordRequest request)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.LoginID == request.LoginID);
+            if (user == null) return false;
+            if (user.PasswordHash != request.OldPassword) return false;
+            if (request.NewPassword != request.ConfirmPassword) return false;
+
+            user.PasswordHash = request.NewPassword;
+            _context.SaveChanges();
+            return true;
+        }
+
+
+
+
+        public bool ForgotPassword(ForgotPasswordRequest request)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.LoginID == request.LoginID);
+            if (user == null)
+                return false;
+            user.PasswordHash = request.NewPassword;
+            _context.SaveChanges();
+            return true;
+        }
+
     }
 }

@@ -1,28 +1,98 @@
 .login-container {
-  width: 300px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  max-width: 360px;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff, #f4f7fb);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-label {
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.login-container label {
   display: block;
-  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #34495e;
 }
 
-input {
+.login-container input {
   width: 100%;
-  padding: 5px;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 4px rgba(52,152,219,0.4);
 }
 
 button {
-  margin-top: 15px;
+  margin-top: 12px;
   width: 100%;
-  padding: 8px;
+  padding: 12px;
+  background: #3498db;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
 }
 
 .error {
-  color: red;
+  color: #e74c3c;
   margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.forgot-link {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.forgot-link a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.forgot-link a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+.switch-link {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.switch-link a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.switch-link a:hover {
+  color: #2980b9;
+  text-decoration: underline;
 }

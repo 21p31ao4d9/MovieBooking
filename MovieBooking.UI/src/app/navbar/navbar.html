@@ -1,29 +1,40 @@
 <nav class="navbar">
-  <!-- Always show Home and Movies -->
-  <a routerLink="/home">🏠 Home</a>
-  <a routerLink="/movies">🎬 Movies</a>
+  <!-- Left section -->
+  <div class="nav-left">
+    <!-- Show Home only for User or before login -->
+    <a *ngIf="!isLoggedIn || role === 'User'" routerLink="/home">🏠 Home</a>
 
-  <!-- Before login -->
-  <ng-container *ngIf="!isLoggedIn">
+    <!-- Movies link -->
+    <a *ngIf="!isLoggedIn" routerLink="/movies">🎬 Movies</a>
+    <a *ngIf="isLoggedIn && role === 'User'" routerLink="/movies">🎬 Movies</a>
+    <a *ngIf="isLoggedIn && role === 'Admin'" routerLink="/admin/dashboard">📊 Admin Dashboard</a>
+    
+  </div>
+
+  <!-- Center section: user links -->
+  <div class="nav-center" *ngIf="isLoggedIn && role === 'User'">
+    <a routerLink="/user/tickets">🎟️ My Tickets</a>
+    <a routerLink="/change-password">🔒 Change Password</a>
+  </div>
+
+  <!-- Center section: admin links -->
+  <div class="nav-center" *ngIf="isLoggedIn && role === 'Admin'">
+    <a  routerLink="/admin/delete-movie">🎬 Movies</a>
+    
+    <a routerLink="/admin/movies">➕ Add Movie</a>
+    <a routerLink="/admin/tickets">🎟️ All Bookings</a>
+    <a routerLink="/change-password">🔒 Change Password</a>
+  </div>
+
+  <!-- Right section: user info + logout -->
+  <div class="nav-right" *ngIf="isLoggedIn">
+    <span class="username">👑 {{ loginID }}</span>
+    <button (click)="logout()">🟩 Logout</button>
+  </div>
+
+  <!-- Right section: before login -->
+  <div class="nav-right" *ngIf="!isLoggedIn">
     <a routerLink="/login">🔑 Login</a>
     <a routerLink="/register">📝 Register</a>
-  </ng-container>
-
-  <!-- After user login -->
-  <ng-container *ngIf="isLoggedIn && role === 'User'">
-    <a routerLink="/mytickets">🎟️ My Tickets</a>
-    <a routerLink="/change-password">🔒 Change Password</a>
-    <span class="username">👤 {{ username }}</span>
-    <button (click)="logout()">🚪 Logout</button>
-  </ng-container>
-
-  <!-- After admin login -->
-  <ng-container *ngIf="isLoggedIn && role === 'Admin'">
-    <a routerLink="/admin/dashboard">📊 Admin Dashboard</a>
-    <a routerLink="/admin/add-movie">➕ Add Movie</a>
-    <a routerLink="/admin/delete-movie">❌ Delete Movie</a>
-    <a routerLink="/change-password">🔒 Change Password</a>
-    <span class="username">👑 {{ username }}</span>
-    <button (click)="logout()">🚪 Logout</button>
-  </ng-container>
+  </div>
 </nav>

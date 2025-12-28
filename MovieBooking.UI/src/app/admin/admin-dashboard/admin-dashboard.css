@@ -1,0 +1,68 @@
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px 0;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.stat-card {
+  width: 200px;
+  height: 140px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card h3 {
+  font-size: 32px;
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+.stat-card p {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.users { border-top: 6px solid #3498db; }
+.movies { border-top: 6px solid #9b59b6; }
+.bookings { border-top: 6px solid #f39c12; }
+.available { border-top: 6px solid #2ecc71; }
+.sold { border-top: 6px solid #e74c3c; }
+
+.chart-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #7f8c8d;
+  margin-top: 40px;
+}
+#ticketsChart {
+  max-width: 300px;   /* shrink width */
+  max-height: 300px;  /* shrink height */
+  margin: 0 auto;     /* center the chart */
+}
+

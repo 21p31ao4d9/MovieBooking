@@ -1,29 +1,13 @@
-<div class="admin-movies-container">
-  <h2>Manage Movies</h2>
+<h2>🎬 Add Movie (Admin)</h2>
 
-  <!-- Add Movie Form -->
-  <form (ngSubmit)="addMovie()" class="add-movie-form">
-    <input [(ngModel)]="newMovie.movieName" name="movieName" placeholder="Movie Name" required />
-    <input [(ngModel)]="newMovie.theatreName" name="theatreName" placeholder="Theatre Name" required />
-    <input [(ngModel)]="newMovie.totalTickets" name="totalTickets" type="number" placeholder="Total Tickets" required />
-    <input [(ngModel)]="newMovie.availableTickets" name="availableTickets" type="number" placeholder="Available Tickets" required />
-    <select [(ngModel)]="newMovie.status" name="status">
-      <option value="Available">Available</option>
-      <option value="Not Available">Not Available</option>
-    </select>
-    <button type="submit">Add Movie</button>
-  </form>
+<form #movieForm="ngForm" (ngSubmit)="addMovie(movieForm)" class="form-container">
+  <label>Movie Name</label>
+  <input type="text" [(ngModel)]="movieName" name="movieName" required />
 
-  <!-- Movie List -->
-  <div *ngFor="let movie of movies" class="movie-card">
-    <h3>{{ movie.movieName }}</h3>
-    <p><strong>Theatre:</strong> {{ movie.theatreName }}</p>
-    <p><strong>Total Tickets:</strong> {{ movie.totalTickets }}</p>
-    <p><strong>Available Tickets:</strong> {{ movie.availableTickets }}</p>
-    <p><strong>Status:</strong> {{ movie.status }}</p>
+  <label>Theatre Name</label>
+  <input type="text" [(ngModel)]="theatreName" name="theatreName" required />
 
-    <!-- Admin actions -->
-    <button (click)="deleteMovie(movie.movieName, movie.movieID)">Delete</button>
-    <button (click)="editMovie(movie)">Edit</button>
-  </div>
-</div>
+  <button type="submit">Add Movie</button>
+
+  
+</form>

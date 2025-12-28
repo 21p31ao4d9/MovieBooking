@@ -1,0 +1,23 @@
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tickets-table th,
+.tickets-table td {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.tickets-table th {
+  background: #34495e;
+  color: #fff;
+}
+
+.tickets-table tr:nth-child(even) {
+  background: #f2f2f2;
+}

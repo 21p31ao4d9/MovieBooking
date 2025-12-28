@@ -1,4 +1,5 @@
-﻿using MovieBookingApp.Services.DTOs.Tickets;
+﻿using MovieBookingApp.Models;
+using MovieBookingApp.Services.DTOs.Tickets;
 using System.Collections.Generic;
 
 namespace MovieBookingApp.Services.Interfaces
@@ -7,5 +8,6 @@ namespace MovieBookingApp.Services.Interfaces
     {
         TicketDto BookTicket(TicketCreateDto dto);
         IEnumerable<TicketDto> GetTicketsByUser(int userId);
+        IEnumerable<Ticket> GetAllTickets();
     }
 }

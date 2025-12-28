@@ -1,0 +1,41 @@
+<h2 class="page-title">🎬 Manage Movies (Admin)</h2>
+
+<!-- 🔍 Search bar -->
+<div class="search-bar">
+  <input
+    type="text"
+    placeholder="🔍 Search by movie or theatre..."
+    [(ngModel)]="searchTerm"
+    (input)="filterMovies()"
+  />
+</div>
+
+<!-- 🎥 Movie cards -->
+<div class="movie-list">
+  <div class="movie-card" *ngFor="let movie of filteredMovies">
+    <div class="movie-header">
+      <h3 class="movie-title">🎞️ {{ movie.movieName }}</h3>
+      <p class="theatre-name">🏛️ Theatre: {{ movie.theatreName }}</p>
+    </div>
+
+    <div class="movie-details">
+      <p>🎟️ <strong>Total Tickets:</strong> {{ movie.totalTickets }}</p>
+      <p>✅ <strong>Available:</strong> {{ movie.availableTickets }}</p>
+      <p>
+        📌 <strong>Status:</strong>
+        <span [ngClass]="{
+          'status-available': movie.status === 'Available',
+          'status-soldout': movie.status === 'SOLD OUT'
+        }">
+          {{ movie.status }}
+        </span>
+      </p>
+    </div>
+
+    <div class="actions">
+      <button class="delete-btn" (click)="deleteMovie(movie)">
+        ❌ Delete Movie
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<h2>🎟️ My Tickets</h2>
+
+<div class="tickets-container">
+  <div class="ticket-card" *ngFor="let booking of bookings">
+    <h3>🎬 Movie ID: {{ booking.movieID }}</h3>
+    <p><strong>Seats:</strong> {{ booking.seatNumbers }}</p>
+    <p><strong>Quantity:</strong> {{ booking.quantity }}</p>
+    <p><strong>Status:</strong> 
+      <span [ngClass]="booking.status.toLowerCase()">{{ booking.status }}</span>
+    </p>
+    <p><strong>Ticket ID:</strong> #{{ booking.ticketID }}</p>
+  </div>
+</div>

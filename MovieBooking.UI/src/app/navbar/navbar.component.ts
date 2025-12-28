@@ -22,9 +22,11 @@ export class NavbarComponent {
     return localStorage.getItem('role'); // "User" or "Admin"
   }
 
-  get username(): string | null {
-    return localStorage.getItem('username');
-  }
+  
+  get loginID(): string | null {
+  return localStorage.getItem('loginID'); // ✅ read loginID
+}
+
 
   logout() {
     localStorage.clear();

@@ -1,4 +1,5 @@
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\bin\Debug\net8.0\MovieBookingApp.Services.deps.json
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\bin\Debug\net8.0\MovieBookingApp.Services.runtimeconfig.json
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\bin\Debug\net8.0\MovieBookingApp.Services.dll
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\bin\Debug\net8.0\MovieBookingApp.Services.pdb
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\bin\Debug\net8.0\MovieBookingApp.Models.dll
@@ -8,8 +9,10 @@ C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\ob
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\obj\Debug\net8.0\MovieBookingApp.Services.AssemblyInfoInputs.cache
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\obj\Debug\net8.0\MovieBookingApp.Services.AssemblyInfo.cs
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\obj\Debug\net8.0\MovieBookingApp.Services.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\obj\Debug\net8.0\MovieBookingApp.Services.sourcelink.json
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\obj\Debug\net8.0\MovieBoo.A39BB8C3.Up2Date
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\obj\Debug\net8.0\MovieBookingApp.Services.dll
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\obj\Debug\net8.0\refint\MovieBookingApp.Services.dll
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\obj\Debug\net8.0\MovieBookingApp.Services.pdb
+C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\obj\Debug\net8.0\MovieBookingApp.Services.genruntimeconfig.cache
 C:\Users\USER\Downloads\MovieBooking\MovieBookingApp\MovieBookingApp.Services\obj\Debug\net8.0\ref\MovieBookingApp.Services.dll

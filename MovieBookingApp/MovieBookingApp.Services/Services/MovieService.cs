@@ -45,14 +45,22 @@ namespace MovieBookingApp.Services.Implementations
             };
         }
 
+
         public MovieDto AddMovie(MovieCreateDto dto)
         {
+            // Check for duplicates (MovieName + TheatreName must be unique)
+            var existing = _context.Movies
+                .FirstOrDefault(m => m.MovieName == dto.MovieName && m.TheatreName == dto.TheatreName);
+
+            if (existing != null)
+                throw new InvalidOperationException("Movie already exists in this theatre");
+
             var movie = new Movie
             {
                 MovieName = dto.MovieName,
                 TheatreName = dto.TheatreName,
-                TotalTickets = dto.TotalTickets,
-                AvailableTickets = dto.TotalTickets,
+                TotalTickets = 50,          // always enforce 50 seats
+                AvailableTickets = 50,
                 Status = "Available"
             };
 
@@ -69,6 +77,7 @@ namespace MovieBookingApp.Services.Implementations
                 Status = movie.Status
             };
         }
+
 
         public void UpdateMovieStatus(int movieId, string status)
         {
@@ -89,6 +98,7 @@ namespace MovieBookingApp.Services.Implementations
                 _context.SaveChanges();
             }
         }
+
         public IEnumerable<TicketDto> GetBookingsByMovie(string movieName)
         {
             var movie = _context.Movies.FirstOrDefault(m => m.MovieName == movieName);
@@ -103,7 +113,9 @@ namespace MovieBookingApp.Services.Implementations
                     MovieID = t.MovieID,
                     Quantity = t.Quantity,
                     SeatNumbers = t.SeatNumbers,
-                    Status = t.Status
+                    Status = t.Status,
+                    MovieName = movie.MovieName,
+                    LoginID = _context.Users.Where(u => u.UserID == t.UserID).Select(u => u.LoginID).FirstOrDefault()
                 })
                 .ToList();
         }
@@ -127,5 +139,44 @@ namespace MovieBookingApp.Services.Implementations
                 })
                 .ToList();
         }
+
+        // ✅ Always generate 50 seats and subtract booked ones
+        public List<string> GetAvailableSeatsForMovie(int movieId)
+        {
+            // Example: 5 rows (A–E), 10 seats each = 50 seats
+            var allSeats = Enumerable.Range(0, 5)
+                .SelectMany(r => Enumerable.Range(1, 10)
+                    .Select(c => $"{(char)('A' + r)}{c}"))
+                .ToList();
+
+            // booked seats stored in Tickets.SeatNumbers as comma-separated string
+            var bookedSeats = _context.Tickets
+                .Where(t => t.MovieID == movieId)
+                .AsEnumerable()
+                .SelectMany(t => t.SeatNumbers.Split(','))
+                .Select(s => s.Trim())
+                .ToList();
+
+            return allSeats.Except(bookedSeats).ToList();
+        }
+
+        public int GetTotalMovies()
+        {
+            // Count all movies in the database
+            return _context.Movies.Count();
+        }
+
+        public int GetAvailableTickets()
+        {
+            // Sum of all available tickets across movies
+            return _context.Movies.Sum(m => m.AvailableTickets);
+        }
+
+        public int GetSoldTickets()
+        {
+            // For each movie: TotalTickets - AvailableTickets = SoldTickets
+            return _context.Movies.Sum(m => m.TotalTickets - m.AvailableTickets);
+        }
+
     }
 }

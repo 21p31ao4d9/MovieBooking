@@ -1,57 +1,90 @@
 .register-container {
-  width: 350px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fafafa;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff, #f4f7fb); /* same as login */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .register-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #2c3e50;
+  font-weight: 600;
 }
 
 .register-container label {
   display: block;
-  margin-top: 12px;
-  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #34495e;
 }
 
 .register-container input,
 .register-container select {
   width: 100%;
-  padding: 8px;
-  margin-top: 6px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.register-container input:focus,
+.register-container select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 4px rgba(52,152,219,0.4);
 }
 
 button {
-  margin-top: 20px;
+  margin-top: 12px;
   width: 100%;
-  padding: 10px;
-  background: #0078d7;
-  color: white;
+  padding: 12px;
+  background: #3498db;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
 }
 
 button:hover {
-  background: #005fa3;
+  background: #2980b9;
+  transform: translateY(-1px);
 }
 
 .error {
-  color: red;
+  color: #e74c3c;
   margin-top: 10px;
+  font-size: 13px;
   text-align: center;
 }
 
 .success {
-  color: green;
+  color: #27ae60;
   margin-top: 10px;
+  font-size: 13px;
   text-align: center;
+}
+.switch-link {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.switch-link a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.switch-link a:hover {
+  color: #2980b9;
+  text-decoration: underline;
 }

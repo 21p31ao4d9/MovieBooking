@@ -1,0 +1,22 @@
+<h2>🎟️ Bookings for Movie</h2>
+
+<table class="tickets-table">
+  <thead>
+    <tr>
+      <th>Movie Name</th>
+      <th>Seat Numbers</th>
+      <th>User</th>
+      <th>Quantity</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let booking of bookings">
+      <td>{{ booking.movieName }}</td>
+      <td>{{ booking.seatNumbers }}</td>
+      <td>{{ booking.loginID }}</td>
+      <td>{{ booking.quantity }}</td>
+     
+    </tr>
+  </tbody>
+</table>

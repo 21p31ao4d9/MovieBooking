@@ -12,18 +12,18 @@ import { MovieService } from '../services/movie';
 })
 export class BookingDialogComponent implements OnInit {
   seatRows: string[][] = [];
-  bookedSeats: Set<string> = new Set();
-  selectedSeats: string[] = [];
+  bookedSeats: Set<string> = new Set();   // ✅ Set for fast lookup
+  selectedSeats: Set<string> = new Set(); // ✅ also a Set
 
   constructor(
-    private movieService: MovieService,
-    public dialogRef: MatDialogRef<BookingDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { movie: any }
+    public dialogRef: MatDialogRef<BookingDialogComponent>, // ✅ make public
+    @Inject(MAT_DIALOG_DATA) public data: { movie: any },
+    private movieService: MovieService
   ) {}
 
   ngOnInit() {
     this.generateSeats(5, 10); // A–E, 1–10
-    this.loadBookedSeats();    // ✅ fetch booked seats before rendering
+    this.loadBookedSeats();
   }
 
   generateSeats(rows: number, cols: number) {
@@ -45,7 +45,7 @@ export class BookingDialogComponent implements OnInit {
           .map(t => t.seatNumbers.replace(/[.,]/g, ',').split(','))
           .flat()
           .map(s => s.trim());
-        this.bookedSeats = new Set(allSeats); // ✅ store in Set for fast lookup
+        this.bookedSeats = new Set(allSeats);
       },
       error: err => console.error('Failed to load booked seats', err)
     });
@@ -56,16 +56,16 @@ export class BookingDialogComponent implements OnInit {
       alert(`Seat ${seat} is already booked.`);
       return;
     }
-    if (this.selectedSeats.includes(seat)) {
-      this.selectedSeats = this.selectedSeats.filter(s => s !== seat);
+    if (this.selectedSeats.has(seat)) {
+      this.selectedSeats.delete(seat);
     } else {
-      this.selectedSeats.push(seat);
+      this.selectedSeats.add(seat);
     }
   }
 
   confirmBooking() {
     const userID = Number(localStorage.getItem('userID'));
-    const quantity = this.selectedSeats.length;
+    const quantity = this.selectedSeats.size;
 
     if (quantity === 0) {
       alert('Please select at least one seat.');
@@ -76,14 +76,14 @@ export class BookingDialogComponent implements OnInit {
       userID,
       movieID: this.data.movie.movieID,
       quantity,
-      seatNumbers: this.selectedSeats.join(',')
+      seatNumbers: Array.from(this.selectedSeats).join(',')
     };
 
     this.movieService.addBooking(this.data.movie.movieName, bookingPayload).subscribe({
       next: () => {
         alert('Booking successful!');
-        this.selectedSeats = [];
-        this.loadBookedSeats(); // ✅ refresh grid
+        this.selectedSeats.clear();
+        this.loadBookedSeats();
         this.dialogRef.close('success');
       },
       error: err => console.error('Booking failed', err)

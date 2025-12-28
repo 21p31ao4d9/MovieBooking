@@ -63,5 +63,12 @@ namespace MovieBookingApp.Services.Implementations
                     Status = t.Status
                 }).ToList();
         }
+
+
+        public IEnumerable<Ticket> GetAllTickets()
+        {
+            return _context.Tickets.ToList();
+        }
+
     }
 }

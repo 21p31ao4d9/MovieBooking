@@ -21,10 +21,10 @@ namespace MovieBookingApp.Models
         [StringLength(100)]
         public string TheatreName { get; set; }
 
-        [Range(1, 1000, ErrorMessage = "Total tickets must be between 1 and 1000")]
-        public int TotalTickets { get; set; }
+        [Range(1, 1000, ErrorMessage = "Total tickets must be 50")]
+        public int TotalTickets { get; set; } = 50;
 
-        [Range(0, 1000, ErrorMessage = "Available tickets must be non-negative")]
+        
         public int AvailableTickets { get; set; }
 
         [Required]

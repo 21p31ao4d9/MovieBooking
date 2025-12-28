@@ -33,21 +33,33 @@ export class MovieService {
   }
 
   // 🎟️ Add a booking for a movie
-  addBooking(movieName: string, booking: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/${movieName}/add`, booking, { headers: this.getAuthHeaders() });
+  addBooking(movieId: number, booking: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${movieId}/add`, booking, { headers: this.getAuthHeaders() });
   }
 
-  // 📌 Get all bookings for a movie (Admin or User — depending on backend auth)
+  // 📌 Get all bookings for a movie
   getBookingsByMovie(movieName: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/movie/${movieName}/bookings`, {
       headers: this.getAuthHeaders()
     });
   }
 
-  // 👤 Get bookings by username (User-specific)
+  // 👤 Get bookings by username
   getBookingsByUser(username: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/user/${username}/bookings`, {
       headers: this.getAuthHeaders()
     });
+  }
+
+  // 🎟️ Get all 50 seats with booking status
+  getSeatsByMovie(movieID: number): Observable<{ seatNumber: string, isBooked: boolean }[]> {
+    return this.http.get<{ seatNumber: string, isBooked: boolean }[]>(`${this.apiUrl}/${movieID}/seats`, {
+      headers: this.getAuthHeaders()
+    });
+  }
+
+  // 📊 ✅ Get dashboard stats (Admin only)
+  getDashboardStats(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/dashboard/stats`, { headers: this.getAuthHeaders() });
   }
 }

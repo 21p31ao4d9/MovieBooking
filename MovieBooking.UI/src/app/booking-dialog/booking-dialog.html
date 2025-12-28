@@ -1,9 +1,9 @@
 <h2>Seating plan — {{ data.movie.movieName }}</h2>
 
 <div class="legend">
-  <span class="available">Available</span>
-  <span class="selected">Selected</span>
-  <span class="booked">Booked</span>
+  <span class="legend-box available"></span> Available
+  <span class="legend-box booked"></span> Booked
+  <span class="legend-box selected"></span> Selected
 </div>
 
 <div class="seat-grid">
@@ -13,7 +13,8 @@
       class="seat"
       [ngClass]="{
         'booked': bookedSeats.has(seat),
-        'selected': selectedSeats.includes(seat)
+        'selected': selectedSeats.has(seat),
+        'available': !bookedSeats.has(seat) && !selectedSeats.has(seat)
       }"
       [disabled]="bookedSeats.has(seat)"
       (click)="onSeatClick(seat)"

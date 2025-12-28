@@ -8,5 +8,7 @@
         public int Quantity { get; set; }
         public string SeatNumbers { get; set; }
         public string Status { get; set; }
+        public string MovieName { get; set; }
+        public string LoginID { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MovieBookingApp.Services.DTOs.Movies;
 using MovieBookingApp.Services.Interfaces;
 
@@ -32,16 +33,28 @@ namespace MovieBookingApp.API.Controllers
             return Ok(movie);
         }
 
-        // POST /api/v1.0/moviebooking/add
         [Authorize(Roles = "Admin")]
         [HttpPost("add")]
         public IActionResult AddMovie([FromBody] MovieCreateDto dto)
         {
             if (dto == null) return BadRequest("Invalid movie data");
 
-            var createdMovie = _movieService.AddMovie(dto);
-            return CreatedAtAction(nameof(GetMovieByName), new { moviename = createdMovie.MovieName }, createdMovie);
+            try
+            {
+                var createdMovie = _movieService.AddMovie(dto);
+                return Content("Movie added successfully", "text/plain");// ✅ plain text response
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(ex.Message); // 409 Conflict → "Movie already exists in this theatre"
+            }
+            catch (DbUpdateException)
+            {
+                return Conflict("Duplicate movie entry not allowed");
+            }
         }
+
+
 
         // DELETE /api/v1.0/moviebooking/{moviename}/delete/{id}
         [Authorize(Roles = "Admin")]
@@ -52,7 +65,7 @@ namespace MovieBookingApp.API.Controllers
             return NoContent();
         }
 
-        
+        // GET /api/v1.0/moviebooking/movie/{moviename}/bookings
         [HttpGet("movie/{moviename}/bookings")]
         public IActionResult GetBookingsByMovie(string moviename)
         {
@@ -60,7 +73,7 @@ namespace MovieBookingApp.API.Controllers
             return Ok(bookings);
         }
 
-        // User: bookings by username
+        // GET /api/v1.0/moviebooking/user/{username}/bookings
         [Authorize(Roles = "User")]
         [HttpGet("user/{username}/bookings")]
         public IActionResult GetBookingsByUser(string username)
@@ -69,7 +82,13 @@ namespace MovieBookingApp.API.Controllers
             return Ok(bookings);
         }
 
-
-
+        // ✅ GET /api/v1.0/moviebooking/{movieId}/seats
+        // Returns all 50 seats with booking status
+        [HttpGet("{movieId}/seats")]
+        public IActionResult GetSeats(int movieId)
+        {
+            var seats = _movieService.GetAvailableSeatsForMovie(movieId); // returns List<SeatStatusDto>
+            return Ok(seats);
+        }
     }
 }

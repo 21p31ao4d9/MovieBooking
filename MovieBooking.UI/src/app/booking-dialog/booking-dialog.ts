@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MovieService } from '../services/movie';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-booking-dialog',
@@ -18,7 +19,8 @@ export class BookingDialogComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<BookingDialogComponent>, // ✅ make public
     @Inject(MAT_DIALOG_DATA) public data: { movie: any },
-    private movieService: MovieService
+    private movieService: MovieService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit() {
@@ -47,13 +49,16 @@ export class BookingDialogComponent implements OnInit {
           .map(s => s.trim());
         this.bookedSeats = new Set(allSeats);
       },
-      error: err => console.error('Failed to load booked seats', err)
+      error: err => {
+        console.error('Failed to load booked seats', err);
+        this.toastr.error('Failed to load booked seats ❌');
+      }
     });
   }
 
   onSeatClick(seat: string) {
     if (this.bookedSeats.has(seat)) {
-      alert(`Seat ${seat} is already booked.`);
+      this.toastr.warning(`Seat ${seat} is already booked ⚠️`);
       return;
     }
     if (this.selectedSeats.has(seat)) {
@@ -68,7 +73,7 @@ export class BookingDialogComponent implements OnInit {
     const quantity = this.selectedSeats.size;
 
     if (quantity === 0) {
-      alert('Please select at least one seat.');
+      this.toastr.info('Please select at least one seat ℹ️');
       return;
     }
 
@@ -81,12 +86,15 @@ export class BookingDialogComponent implements OnInit {
 
     this.movieService.addBooking(this.data.movie.movieName, bookingPayload).subscribe({
       next: () => {
-        alert('Booking successful!');
+        this.toastr.success('Booking successful 🎉');
         this.selectedSeats.clear();
         this.loadBookedSeats();
         this.dialogRef.close('success');
       },
-      error: err => console.error('Booking failed', err)
+      error: err => {
+        console.error('Booking failed', err);
+        this.toastr.error('Booking failed ❌');
+      }
     });
   }
 }

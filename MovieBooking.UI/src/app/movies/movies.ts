@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { Router } from '@angular/router';   // ✅ import Router
+import { Router } from '@angular/router';
 import { MovieService } from '../services/movie';
 import { BookingDialogComponent } from '../booking-dialog/booking-dialog';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-movies',
@@ -17,12 +18,14 @@ export class MoviesComponent implements OnInit {
   movies: any[] = [];
   filteredMovies: any[] = [];
   searchTerm: string = '';
-  isLoggedIn: boolean = !!localStorage.getItem('token');  // ✅ check login status
+  isLoggedIn: boolean = !!localStorage.getItem('token');
 
   constructor(
     private movieService: MovieService,
     private dialog: MatDialog,
-    private router: Router   // ✅ inject Router
+    private router: Router,
+    private toastr: ToastrService,
+    private cdr: ChangeDetectorRef   // ✅ inject ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -32,10 +35,18 @@ export class MoviesComponent implements OnInit {
   loadMovies(): void {
     this.movieService.getMovies().subscribe({
       next: (data: any[]) => {
-        this.movies = data;
-        this.filteredMovies = data;
+        // ✅ wrap in setTimeout OR call detectChanges
+        setTimeout(() => {
+          this.movies = data;
+          this.filteredMovies = data;
+          this.toastr.success(`Loaded ${data.length} movies 🎬`);
+          this.cdr.detectChanges(); // ✅ force Angular to re-check
+        });
       },
-      error: (err: any) => console.error('Failed to load movies', err)
+      error: (err: any) => {
+        console.error('Failed to load movies', err);
+        this.toastr.error('Failed to load movies ❌');
+      }
     });
   }
 
@@ -46,16 +57,19 @@ export class MoviesComponent implements OnInit {
         m.movieName.toLowerCase().includes(term) ||
         (m.theatreName && m.theatreName.toLowerCase().includes(term))
     );
+
+    if (this.filteredMovies.length === 0) {
+      this.toastr.info('No movies match your search 🔍');
+    }
   }
 
   openBookingDialog(movie: any) {
-    // ✅ If not logged in, redirect to login page
     if (!this.isLoggedIn) {
+      this.toastr.warning('Please login to book tickets ⚠️');
       this.router.navigate(['/login']);
       return;
     }
 
-    // ✅ Otherwise open booking dialog
     const dialogRef = this.dialog.open(BookingDialogComponent, {
       width: '640px',
       data: {
@@ -68,7 +82,10 @@ export class MoviesComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'success') {
+        this.toastr.success(`Booking confirmed for "${movie.movieName}" ✅`);
         this.loadMovies();
+      } else if (result === 'error') {
+        this.toastr.error(`Booking failed for "${movie.movieName}" ❌`);
       }
     });
   }

@@ -42,11 +42,11 @@ namespace MovieBookingApp.API.Controllers
             try
             {
                 var createdMovie = _movieService.AddMovie(dto);
-                return Content("Movie added successfully", "text/plain");// ✅ plain text response
+                return Ok(createdMovie);
             }
             catch (InvalidOperationException ex)
             {
-                return Conflict(ex.Message); // 409 Conflict → "Movie already exists in this theatre"
+                return Conflict(ex.Message);
             }
             catch (DbUpdateException)
             {
@@ -54,7 +54,15 @@ namespace MovieBookingApp.API.Controllers
             }
         }
 
-
+        // ✅ PUT /api/v1.0/moviebooking/{movieId}/update-status
+        [Authorize(Roles = "Admin")]
+        [HttpPut("{movieId}/update-status")]
+        public IActionResult UpdateTicketStatus(int movieId)
+        {
+            var updatedMovie = _movieService.UpdateMovieStatus(movieId);
+            if (updatedMovie == null) return NotFound("Movie not found");
+            return Ok(updatedMovie);
+        }
 
         // DELETE /api/v1.0/moviebooking/{moviename}/delete/{id}
         [Authorize(Roles = "Admin")]
@@ -82,12 +90,11 @@ namespace MovieBookingApp.API.Controllers
             return Ok(bookings);
         }
 
-        // ✅ GET /api/v1.0/moviebooking/{movieId}/seats
-        // Returns all 50 seats with booking status
+        // GET /api/v1.0/moviebooking/{movieId}/seats
         [HttpGet("{movieId}/seats")]
         public IActionResult GetSeats(int movieId)
         {
-            var seats = _movieService.GetAvailableSeatsForMovie(movieId); // returns List<SeatStatusDto>
+            var seats = _movieService.GetAvailableSeatsForMovie(movieId);
             return Ok(seats);
         }
     }

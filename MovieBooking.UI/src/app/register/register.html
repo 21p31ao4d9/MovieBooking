@@ -1,39 +1,63 @@
 <div class="register-container">
   <h2>Create Account</h2>
 
-  <form (ngSubmit)="register()">
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
     <label>Login ID:</label>
-    <input type="text" [(ngModel)]="loginID" name="loginID" required />
+    <input type="text" formControlName="loginID" />
+    <div class="error" *ngIf="loginID?.invalid && loginID?.touched">
+      Login ID is required
+    </div>
 
     <label>First Name:</label>
-    <input type="text" [(ngModel)]="firstName" name="firstName" required />
+    <input type="text" formControlName="firstName" />
+    <div class="error" *ngIf="firstName?.invalid && firstName?.touched">
+      First Name is required
+    </div>
 
     <label>Last Name:</label>
-    <input type="text" [(ngModel)]="lastName" name="lastName" required />
+    <input type="text" formControlName="lastName" />
+    <div class="error" *ngIf="lastName?.invalid && lastName?.touched">
+      Last Name is required
+    </div>
 
     <label>Email:</label>
-    <input type="email" [(ngModel)]="email" name="email" required />
+    <input type="email" formControlName="email" />
+    <div class="error" *ngIf="email?.invalid && email?.touched">
+      <span *ngIf="email?.errors?.['required']">Email is required</span>
+      <span *ngIf="email?.errors?.['email']">Please enter a valid email</span>
+    </div>
 
     <label>Contact Number:</label>
-    <input type="text" [(ngModel)]="contactNumber" name="contactNumber" required />
+    <input type="text" formControlName="contactNumber" />
+    <div class="error" *ngIf="contactNumber?.invalid && contactNumber?.touched">
+      <span *ngIf="contactNumber?.errors?.['required']">Contact Number is required</span>
+      <span *ngIf="contactNumber?.errors?.['pattern']">Contact Number must be 10 digits</span>
+    </div>
 
     <label>Password:</label>
-    <input type="password" [(ngModel)]="password" name="password" required />
+    <input type="password" formControlName="password" />
+    <div class="error" *ngIf="password?.invalid && password?.touched">
+      <span *ngIf="password?.errors?.['required']">Password is required</span>
+      <span *ngIf="password?.errors?.['pattern']">
+        Password must be at least 8 characters with uppercase, lowercase, number, and special character
+      </span>
+    </div>
 
     <label>Confirm Password:</label>
-    <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required />
+    <input type="password" formControlName="confirmPassword" />
+    <div class="error" *ngIf="confirmPassword?.invalid && confirmPassword?.touched">
+      <span *ngIf="confirmPassword?.errors?.['required']">Confirm Password is required</span>
+      <span *ngIf="confirmPassword?.errors?.['mismatch']">Passwords do not match</span>
+    </div>
 
     <label>Role:</label>
-    <select [(ngModel)]="role" name="role" required>
+    <select formControlName="role">
       <option [value]="1">User</option>
       <option [value]="2">Admin</option>
     </select>
 
-    <button type="submit">Register</button>
+    <button type="submit" [disabled]="registerForm.invalid">Register</button>
   </form>
-
-  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
-  <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
 
   <!-- ✅ Link to Login -->
   <p class="switch-link">

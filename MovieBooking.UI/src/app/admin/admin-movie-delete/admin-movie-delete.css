@@ -1,79 +1,129 @@
 .page-title {
   text-align: center;
-  font-size: 24px;
-  margin: 20px 0;
+  font-size: 28px;
+  margin: 30px 0 10px;
   color: #2c3e50;
+  font-weight: 600;
 }
 
 .search-bar {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .search-bar input {
   width: 60%;
-  padding: 10px;
+  padding: 10px 14px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .movie-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
+  padding: 0 20px;
 }
 
 .movie-card {
-  width: 300px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 15px;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
 }
 
 .movie-header h3 {
   margin: 0;
-  font-size: 20px;
-  color: #34495e;
+  font-size: 22px;
+  color: #2c3e50;
 }
 
 .theatre-name {
-  font-size: 14px;
+  font-size: 15px;
   color: #7f8c8d;
+  margin-bottom: 10px;
 }
 
 .movie-details p {
-  margin: 6px 0;
-  font-size: 14px;
+  margin: 8px 0;
+  font-size: 15px;
+  color: #34495e;
 }
 
 .status-available {
-  color: green;
+  color: #27ae60;
   font-weight: bold;
 }
 
 .status-soldout {
-  color: red;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.status-bookasap {
+  color: #f39c12;
   font-weight: bold;
 }
 
 .actions {
-  margin-top: 10px;
-  text-align: center;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-btn,
+.delete-btn {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.update-btn {
+  background: #3498db;
+  color: white;
+}
+
+.update-btn:hover {
+  background: #2980b9;
 }
 
 .delete-btn {
   background: #e74c3c;
   color: white;
-  border: none;
-  padding: 8px 12px;
-  font-size: 14px;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
 .delete-btn:hover {
   background: #c0392b;
 }
+.movie-card {
+  width: 320px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: transform 0.2s ease;
+  text-align: center; /* ✅ center all text inside the card */
+}
+
+.movie-header h3,
+.theatre-name,
+.movie-details p,
+.status-available,
+.status-soldout,
+.status-bookasap {
+  text-align: center; /* ✅ ensure individual elements are centered */
+  margin: 0 auto;
+}
+

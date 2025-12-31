@@ -1,7 +1,8 @@
-import { Component, OnInit, AfterViewChecked, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MovieService } from '../../services/movie';
 import { Chart, registerables } from 'chart.js';
+import { ToastrService } from 'ngx-toastr';
 
 Chart.register(...registerables);
 
@@ -12,42 +13,79 @@ Chart.register(...registerables);
   templateUrl: './admin-dashboard.html',
   styleUrls: ['./admin-dashboard.css']
 })
-export class AdminDashboardComponent implements OnInit, AfterViewChecked {
-  stats: any = null;
+export class AdminDashboardComponent implements OnInit {
+  stats: any = { availableTickets: 0, soldTickets: 0 }; // ✅ safe default
   movies: any[] = [];
   error: string = '';
-  chartsDrawn = false;
 
   @ViewChild('ticketsChart', { static: false }) ticketsChart!: ElementRef<HTMLCanvasElement>;
   @ViewChild('bookingsChart', { static: false }) bookingsChart!: ElementRef<HTMLCanvasElement>;
 
-  constructor(private movieService: MovieService) {}
+  constructor(
+    private movieService: MovieService,
+    private toastr: ToastrService,
+    private cdRef: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
-    this.movieService.getDashboardStats().subscribe({
-      next: (data) => { this.stats = data; },
-      error: (err) => {
-        this.error = 'Failed to load dashboard stats';
-        console.error(err);
-      }
-    });
+    this.loadDashboard();
+    this.loadMovies();
+  }
 
-    this.movieService.getMovies().subscribe({
-      next: (data) => { this.movies = data; },
-      error: (err) => {
-        this.error = 'Failed to load movie data';
-        console.error(err);
+  private loadDashboard(): void {
+    this.movieService.getDashboardStats().subscribe({
+      next: (data) => {
+        this.stats = data;
+        this.cdRef.detectChanges(); // ✅ trigger re-check
+        this.renderPieChart();
+      },
+      error: () => {
+        this.error = 'Failed to load dashboard stats';
+        this.toastr.error(this.error);
       }
     });
   }
 
-  ngAfterViewChecked(): void {
-    // Render charts once data and canvases are ready
-    if (this.stats && this.movies.length > 0 && !this.chartsDrawn) {
-      this.renderPieChart();
-      this.renderBarChart();
-      this.chartsDrawn = true;
-    }
+  private loadMovies(): void {
+    this.movieService.getMovies().subscribe({
+      next: (data) => {
+        this.movies = data;
+        this.cdRef.detectChanges(); // ✅ trigger re-check
+        this.renderBarChart();
+      },
+      error: () => {
+        this.error = 'Failed to load movie data';
+        this.toastr.error(this.error);
+      }
+    });
+  }
+
+  // 🔄 Update movie status
+  updateStatus(movie: any): void {
+    this.movieService.updateMovieStatus(movie.movieID).subscribe({
+      next: () => {
+        this.toastr.success(`Status updated for "${movie.movieName}" ✅`);
+        this.loadMovies();
+      },
+      error: (err) => {
+        this.toastr.error(err.error || 'Failed to update status ❌');
+      }
+    });
+  }
+
+  // ❌ Delete movie
+  deleteMovie(movie: any): void {
+    if (!confirm(`Are you sure you want to delete "${movie.movieName}"?`)) return;
+
+    this.movieService.deleteMovie(movie.movieName, movie.movieID).subscribe({
+      next: () => {
+        this.toastr.success(`Movie "${movie.movieName}" deleted successfully ✅`);
+        this.loadMovies();
+      },
+      error: (err) => {
+        this.toastr.error(err.error || 'Failed to delete movie ❌');
+      }
+    });
   }
 
   renderPieChart(): void {

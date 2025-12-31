@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+/* Adjust default icon spacing for all toast types */
+.toast-success::before,
+.toast-error::before,
+.toast-info::before,
+.toast-warning::before {
+  margin-right: 12px !important;   /* ✅ space between icon and text */
+  font-size: 20px !important;      /* optional: make icon slightly larger */
+  vertical-align: middle !important;
+}
+
+/* Style the toast box */
+.toast {
+  display: flex !important;        /* ✅ align icon + text horizontally */
+  align-items: center !important;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  background-color: #333 !important; /* ✅ neat dark background */
+  color: #fff !important;
+}
+
+/* Position below navbar */
+.toast-below-navbar {
+  top: 80px !important;            /* adjust based on navbar height */
+  left: 50% !important;
+  transform: translateX(-50%);
+  position: fixed !important;
+  z-index: 9999 !important;
+}

@@ -16,6 +16,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MovieBookingApp.API.Controllers.MoviesController",
+    "Method": "UpdateTicketStatus",
+    "RelativePath": "api/v1.0/moviebooking/{movieId}/update-status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MovieBookingApp.API.Controllers.TicketsController",
     "Method": "BookTicket",
     "RelativePath": "api/v1.0/moviebooking/{moviename}/add",
@@ -52,37 +68,6 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MovieBookingApp.API.Controllers.TicketsController",
-    "Method": "UpdateTicketStatus",
-    "RelativePath": "api/v1.0/moviebooking/{moviename}/update/{userId}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "moviename",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "ticket",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "status",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "userId",
-        "Type": "",
         "IsRequired": true
       }
     ],

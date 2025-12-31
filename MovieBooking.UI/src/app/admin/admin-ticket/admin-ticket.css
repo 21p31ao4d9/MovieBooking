@@ -1,3 +1,4 @@
+/* Table styling */
 .tickets-table {
   width: 100%;
   border-collapse: collapse;
@@ -20,4 +21,31 @@
 
 .tickets-table tr:nth-child(even) {
   background: #f2f2f2;
+}
+
+/* Dropdown styling */
+.movie-selector {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.movie-selector label {
+  font-weight: 600;
+  color: #34495e;
+}
+
+.movie-selector select {
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.movie-selector select:hover {
+  border-color: #3498db;
 }

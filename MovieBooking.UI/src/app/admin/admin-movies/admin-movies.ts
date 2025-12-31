@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-movies',
@@ -15,7 +16,7 @@ export class AdminMoviesComponent {
   theatreName: string = '';
   message: string = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private toastr: ToastrService) {}
 
   addMovie(form: any) {
     const payload = {
@@ -35,15 +36,13 @@ export class AdminMoviesComponent {
     ).subscribe({
       next: (res) => {
         this.message = res;
-        alert("Movie added successfully ✅");
-
-        // ✅ reset the whole form (clears inputs + bound values)
+        this.toastr.success('Movie added successfully ✅'); // 🎉 toast instead of alert
         form.resetForm();
       },
       error: (err) => {
         this.message = err.error;
-        alert(this.message);
-        form.resetForm(); // also clear inputs on error
+        this.toastr.error(this.message || 'Failed to add movie ❌'); // 🚨 toast error
+        form.resetForm();
       }
     });
   }

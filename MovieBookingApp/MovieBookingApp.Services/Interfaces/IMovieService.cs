@@ -21,5 +21,7 @@ namespace MovieBookingApp.Services.Interfaces
         int GetAvailableTickets();
         int GetSoldTickets();
 
+        MovieDto GetMovieById(int id);
+        MovieDto UpdateMovieStatus(int movieId);
     }
 }

@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|solutionrelative:moviebookingapp.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|solutionrelative:moviebookingapp.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|solutionrelative:moviebookingapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\dtos\\users\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\dtos\\users\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.api\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|solutionrelative:moviebookingapp.api\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\interfaces\\imovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\interfaces\\imovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.api\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|solutionrelative:moviebookingapp.api\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|solutionrelative:moviebookingapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\interfaces\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\dtos\\users\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\dtos\\users\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\dtos\\users\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\dtos\\tickets\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\dtos\\tickets\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -97,10 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.services\\dtos\\movies\\moviecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49266839-3CA4-4571-9CD1-F7CE543858F3}|MovieBookingApp.Services\\MovieBookingApp.Services.csproj|solutionrelative:moviebookingapp.services\\dtos\\movies\\moviecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.api\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|solutionrelative:moviebookingapp.api\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CDF71DC-0084-48A1-A804-D8E5A155EC9F}|MovieBookingApp.API\\MovieBookingApp.API.csproj|c:\\users\\user\\downloads\\moviebooking\\moviebookingapp\\moviebookingapp.api\\moviebookingapp.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -154,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -162,85 +162,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MovieService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Services\\MovieService.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.Services\\Services\\MovieService.cs",
               "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Services\\MovieService.cs",
               "RelativeToolTip": "MovieBookingApp.Services\\Services\\MovieService.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAuwLYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAYwNgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T06:13:16.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-20T06:13:16.245Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "MovieBookingApp.API\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\Controllers\\UsersController.cs*",
-              "RelativeToolTip": "MovieBookingApp.API\\Controllers\\UsersController.cs*",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAcwBoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T06:23:48.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "IMovieService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Interfaces\\IMovieService.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.Services\\Interfaces\\IMovieService.cs",
               "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Interfaces\\IMovieService.cs",
               "RelativeToolTip": "MovieBookingApp.Services\\Interfaces\\IMovieService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA5wBYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T06:10:48.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-20T06:10:48.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "MoviesController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\Controllers\\MoviesController.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.API\\Controllers\\MoviesController.cs",
               "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\Controllers\\MoviesController.cs",
               "RelativeToolTip": "MovieBookingApp.API\\Controllers\\MoviesController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAcwC0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAuwFwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T06:24:28.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-20T06:24:28.163Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TicketService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Services\\TicketService.cs",
-              "RelativeDocumentMoniker": "MovieBookingApp.Services\\Services\\TicketService.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Services\\TicketService.cs",
-              "RelativeToolTip": "MovieBookingApp.Services\\Services\\TicketService.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAYwEoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T06:13:44.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.Services\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Services\\UserService.cs",
               "RelativeToolTip": "MovieBookingApp.Services\\Services\\UserService.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAwFwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAowFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-20T06:12:24.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\Program.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.API\\Program.cs",
@@ -248,134 +219,11 @@
               "RelativeToolTip": "MovieBookingApp.API\\Program.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAmwG4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T14:58:07.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-20T14:58:07.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ITicketService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Interfaces\\ITicketService.cs",
-              "RelativeDocumentMoniker": "MovieBookingApp.Services\\Interfaces\\ITicketService.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Interfaces\\ITicketService.cs",
-              "RelativeToolTip": "MovieBookingApp.Services\\Interfaces\\ITicketService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T06:11:25.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "MovieBookingApp.Services\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "MovieBookingApp.Services\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T06:09:15.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ChangePasswordRequest.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\ChangePasswordRequest.cs",
-              "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Users\\ChangePasswordRequest.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\ChangePasswordRequest.cs",
-              "RelativeToolTip": "MovieBookingApp.Services\\DTOs\\Users\\ChangePasswordRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T12:39:56.223Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ForgotPasswordRequest.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\ForgotPasswordRequest.cs",
-              "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Users\\ForgotPasswordRequest.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\ForgotPasswordRequest.cs",
-              "RelativeToolTip": "MovieBookingApp.Services\\DTOs\\Users\\ForgotPasswordRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-26T12:40:46.487Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\appsettings.json",
-              "RelativeDocumentMoniker": "MovieBookingApp.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\appsettings.json",
-              "RelativeToolTip": "MovieBookingApp.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-20T06:25:26.833Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MovieBookingApp.Services.csproj",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\MovieBookingApp.Services.csproj",
-              "RelativeDocumentMoniker": "MovieBookingApp.Services\\MovieBookingApp.Services.csproj",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\MovieBookingApp.Services.csproj",
-              "RelativeToolTip": "MovieBookingApp.Services\\MovieBookingApp.Services.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-20T06:16:37.295Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MovieBookingApp.Models.csproj",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\MovieBookingApp.Models.csproj",
-              "RelativeDocumentMoniker": "MovieBookingApp.Models\\MovieBookingApp.Models.csproj",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\MovieBookingApp.Models.csproj",
-              "RelativeToolTip": "MovieBookingApp.Models\\MovieBookingApp.Models.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-26T13:48:22.754Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\User.cs",
-              "RelativeDocumentMoniker": "MovieBookingApp.Models\\User.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\User.cs",
-              "RelativeToolTip": "MovieBookingApp.Models\\User.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwDAAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T15:51:59.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserLoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\UserLoginDto.cs",
-              "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Users\\UserLoginDto.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\UserLoginDto.cs",
-              "RelativeToolTip": "MovieBookingApp.Services\\DTOs\\Users\\UserLoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T06:02:13.523Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TicketDto.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Tickets\\TicketDto.cs",
-              "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Tickets\\TicketDto.cs",
-              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Tickets\\TicketDto.cs",
-              "RelativeToolTip": "MovieBookingApp.Services\\DTOs\\Tickets\\TicketDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T06:06:09.015Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 2,
               "Title": "UserRegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\UserRegisterDto.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Users\\UserRegisterDto.cs",
@@ -387,7 +235,151 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "MovieBookingApp.API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "MovieBookingApp.API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T06:23:48.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TicketService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Services\\TicketService.cs",
+              "RelativeDocumentMoniker": "MovieBookingApp.Services\\Services\\TicketService.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Services\\TicketService.cs",
+              "RelativeToolTip": "MovieBookingApp.Services\\Services\\TicketService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T06:13:44.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ITicketService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Interfaces\\ITicketService.cs",
+              "RelativeDocumentMoniker": "MovieBookingApp.Services\\Interfaces\\ITicketService.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Interfaces\\ITicketService.cs",
+              "RelativeToolTip": "MovieBookingApp.Services\\Interfaces\\ITicketService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T06:11:25.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "MovieBookingApp.Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "MovieBookingApp.Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T06:09:15.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChangePasswordRequest.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\ChangePasswordRequest.cs",
+              "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Users\\ChangePasswordRequest.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\ChangePasswordRequest.cs",
+              "RelativeToolTip": "MovieBookingApp.Services\\DTOs\\Users\\ChangePasswordRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T12:39:56.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ForgotPasswordRequest.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\ForgotPasswordRequest.cs",
+              "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Users\\ForgotPasswordRequest.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\ForgotPasswordRequest.cs",
+              "RelativeToolTip": "MovieBookingApp.Services\\DTOs\\Users\\ForgotPasswordRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T12:40:46.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\appsettings.json",
+              "RelativeDocumentMoniker": "MovieBookingApp.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\appsettings.json",
+              "RelativeToolTip": "MovieBookingApp.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-20T06:25:26.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MovieBookingApp.Services.csproj",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\MovieBookingApp.Services.csproj",
+              "RelativeDocumentMoniker": "MovieBookingApp.Services\\MovieBookingApp.Services.csproj",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\MovieBookingApp.Services.csproj",
+              "RelativeToolTip": "MovieBookingApp.Services\\MovieBookingApp.Services.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-20T06:16:37.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MovieBookingApp.Models.csproj",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\MovieBookingApp.Models.csproj",
+              "RelativeDocumentMoniker": "MovieBookingApp.Models\\MovieBookingApp.Models.csproj",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\MovieBookingApp.Models.csproj",
+              "RelativeToolTip": "MovieBookingApp.Models\\MovieBookingApp.Models.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-26T13:48:22.754Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\User.cs",
+              "RelativeDocumentMoniker": "MovieBookingApp.Models\\User.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\User.cs",
+              "RelativeToolTip": "MovieBookingApp.Models\\User.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T15:51:59.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserLoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\UserLoginDto.cs",
+              "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Users\\UserLoginDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\UserLoginDto.cs",
+              "RelativeToolTip": "MovieBookingApp.Services\\DTOs\\Users\\UserLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T06:02:13.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TicketDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Tickets\\TicketDto.cs",
+              "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Tickets\\TicketDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Tickets\\TicketDto.cs",
+              "RelativeToolTip": "MovieBookingApp.Services\\DTOs\\Tickets\\TicketDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T06:06:09.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "UserResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Users\\UserResponseDto.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Users\\UserResponseDto.cs",
@@ -399,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "MovieBookingContext.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\MovieBookingContext.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.Models\\MovieBookingContext.cs",
@@ -411,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "SeatStatusDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Movies\\SeatStatusDto.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Movies\\SeatStatusDto.cs",
@@ -423,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Seat.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\Seat.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.Models\\Seat.cs",
@@ -435,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Movie.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Models\\Movie.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.Models\\Movie.cs",
@@ -447,7 +439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "MovieCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.Services\\DTOs\\Movies\\MovieCreateDto.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.Services\\DTOs\\Movies\\MovieCreateDto.cs",
@@ -459,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 6,
               "Title": "TicketsController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Downloads\\MovieBooking\\MovieBookingApp\\MovieBookingApp.API\\Controllers\\TicketsController.cs",
               "RelativeDocumentMoniker": "MovieBookingApp.API\\Controllers\\TicketsController.cs",

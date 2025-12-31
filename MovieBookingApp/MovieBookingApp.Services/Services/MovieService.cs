@@ -178,5 +178,59 @@ namespace MovieBookingApp.Services.Implementations
             return _context.Movies.Sum(m => m.TotalTickets - m.AvailableTickets);
         }
 
+
+        public MovieDto GetMovieById(int id)
+        {
+            var movie = _context.Movies.FirstOrDefault(m => m.MovieID == id);
+            if (movie == null) return null;
+
+            // calculate booked tickets dynamically from Tickets table
+            int bookedTickets = _context.Tickets.Count(t => t.MovieID == id);
+            int availableTickets = movie.TotalTickets - bookedTickets;
+
+            return new MovieDto
+            {
+                MovieID = movie.MovieID,
+                MovieName = movie.MovieName,
+                TheatreName = movie.TheatreName,
+                TotalTickets = movie.TotalTickets,
+                AvailableTickets = availableTickets,
+                Status = movie.Status
+            };
+        }
+
+        public MovieDto UpdateMovieStatus(int movieId)
+        {
+            var movie = _context.Movies.FirstOrDefault(m => m.MovieID == movieId);
+            if (movie == null) return null;
+
+            // calculate booked tickets dynamically
+            int bookedTickets = _context.Tickets.Count(t => t.MovieID == movieId);
+            int availableTickets = movie.TotalTickets - bookedTickets;
+
+            // apply status rules
+            if (availableTickets == 0)
+                movie.Status = "SOLD OUT";
+            else if (availableTickets <= movie.TotalTickets / 2)
+                movie.Status = "BOOK ASAP";
+            else
+                movie.Status = "Available";
+
+            _context.SaveChanges();
+
+            return new MovieDto
+            {
+                MovieID = movie.MovieID,
+                MovieName = movie.MovieName,
+                TheatreName = movie.TheatreName,
+                TotalTickets = movie.TotalTickets,
+                AvailableTickets = availableTickets,
+                Status = movie.Status
+            };
+        }
+
+
+
+
     }
 }

@@ -70,6 +70,29 @@
         }
       }
     },
+    "/api/v1.0/moviebooking/{movieId}/update-status": {
+      "put": {
+        "tags": [
+          "Movies"
+        ],
+        "parameters": [
+          {
+            "name": "movieId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1.0/moviebooking/{moviename}/delete/{id}": {
       "delete": {
         "tags": [
@@ -198,63 +221,6 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/TicketCreateDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/v1.0/moviebooking/{moviename}/update/{userId}": {
-      "put": {
-        "tags": [
-          "Tickets"
-        ],
-        "parameters": [
-          {
-            "name": "moviename",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "ticket",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "string"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "string"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "string"
               }
             }
           }

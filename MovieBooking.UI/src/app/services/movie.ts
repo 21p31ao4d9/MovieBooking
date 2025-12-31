@@ -32,6 +32,13 @@ export class MovieService {
     return this.http.delete(`${this.apiUrl}/${movieName}/delete/${id}`, { headers: this.getAuthHeaders() });
   }
 
+
+  updateMovieStatus(movieId: number): Observable<any> 
+  { 
+    return this.http.put(`${this.apiUrl}/${movieId}/update-status`, {}, { headers: this.getAuthHeaders() }); 
+  }
+  
+
   // 🎟️ Add a booking for a movie
   addBooking(movieId: number, booking: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/${movieId}/add`, booking, { headers: this.getAuthHeaders() });

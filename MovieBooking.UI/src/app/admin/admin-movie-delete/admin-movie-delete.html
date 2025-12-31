@@ -25,7 +25,8 @@
         📌 <strong>Status:</strong>
         <span [ngClass]="{
           'status-available': movie.status === 'Available',
-          'status-soldout': movie.status === 'SOLD OUT'
+          'status-soldout': movie.status === 'SOLD OUT',
+          'status-bookasap': movie.status === 'BOOK ASAP'
         }">
           {{ movie.status }}
         </span>
@@ -33,6 +34,9 @@
     </div>
 
     <div class="actions">
+      <button class="update-btn" (click)="updateStatus(movie)">
+        🔄 Update Status
+      </button>
       <button class="delete-btn" (click)="deleteMovie(movie)">
         ❌ Delete Movie
       </button>
